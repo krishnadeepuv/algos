@@ -2,47 +2,49 @@ import java.util.Stack;
 
 class QueueStack {
 
-    private Stack<Integer> st1 = null;
-    private Stack<Integer> st2 = null;
+    private Stack<Integer> st = new Stack<Integer>();
+    private Stack<Integer> st1 = new Stack<Integer>();
 
     public QueueStack() {
-        st1 = new Stack<>();
-        st2 = new Stack<>();
+        st = new Stack<Integer>();
+        st1 = new Stack<Integer>();
     }
 
     public void push(int x) {
-        if (st1.size() <= 0)
-            st1.add(x);
-        else {
-            st2.add(st1.pop());
-            st1.add(x);
-        }
-
+        st.push(x);
     }
 
     public int pop() {
-        if (empty())
-            return -1;
-        if (st1.size() > 0)
+        if (!st1.empty())
             return st1.pop();
-        else
-            return st2.pop();
+        else if (st.size() > 0) {
+            int cnt = st.size();
+            for (int i = 0; i < cnt; i++)
+                st1.push(st.pop());
+            return st1.pop();
+        } else
+            return -1;
+
     }
 
     public int peek() {
-        if (empty())
-            return -1;
-        if (st1.size() > 0)
+        if (!st1.empty())
             return st1.peek();
-        else
-            return st2.peek();
+        else if (st.size() > 0) {
+            int cnt = st.size();
+            for (int i = 0; i < cnt; i++) {
+                st1.push(st.pop());
+            }
+            return st1.peek();
+        } else
+            return -1;
     }
 
     public boolean empty() {
-        if (st1.isEmpty() && st2.isEmpty())
-            return true;
-        else
+        if (st.size() > 0 || st1.size() > 0)
             return false;
+        else
+            return true;
     }
 
     public static void main(String[] args) {
