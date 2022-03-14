@@ -1,5 +1,6 @@
 /**
  * HashSet
+ * Take square root of the max range given for hashing
  */
 public class CustomHashSet {
 
