@@ -1,3 +1,5 @@
+package GS;
+
 public class RoboCircle {
     public boolean isRobotBounded(String instructions) {
         int dirs[][] = { { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 0 } };

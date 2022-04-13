@@ -1,3 +1,5 @@
+package GS;
+
 public class ReachingPointsBT {
     public boolean reachingPoints(int sx, int sy, int tx, int ty) {
 

@@ -1,3 +1,5 @@
+package GS;
+
 public class LeftRightSum {
     public int pivotIndex(int[] nums) {
         if (nums == null || nums.length == 0)

@@ -1,3 +1,5 @@
+package GS;
+
 import java.util.HashMap;
 
 public class MaxChar {

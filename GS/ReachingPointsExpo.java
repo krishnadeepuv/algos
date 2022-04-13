@@ -1,3 +1,5 @@
+package GS;
+
 public class ReachingPointsExpo {
 
     int px = -1;

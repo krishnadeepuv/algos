@@ -1,3 +1,5 @@
+package GS;
+
 import java.util.LinkedHashMap;
 
 public class FirstUnique {

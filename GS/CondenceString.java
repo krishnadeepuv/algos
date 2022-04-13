@@ -1,3 +1,5 @@
+package GS;
+
 public class CondenceString {
     public int compress(char[] chars) {
 
